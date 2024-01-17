@@ -7,6 +7,16 @@ class ProfilePage extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
+          appBar: AppBar(backgroundColor: Color(0xFF475260),
+          shadowColor: Color(0XFF475269).withOpacity(0.8),
+          title: Text(
+            "Profil",
+            style:TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
+              letterSpacing: 1,
+              )
+             ,),),
           backgroundColor: Colors.white,
           body: Container(
             child: Column(
@@ -62,6 +72,7 @@ class ProfilePage extends StatelessWidget {
                   child: Expanded(
                       child: ListView(
                     children: [
+
                       Card(
                         margin:
                             const EdgeInsets.only(left: 35, right: 35, bottom: 10),

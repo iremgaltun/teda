@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:teda1/pages/AddNewProduct.dart';
 import 'package:teda1/pages/ProfilePage.dart';
 import 'package:teda1/widgets/BottomCartSheet.dart';
-//import 'package:flutter_aplication_1/widgets/BottomCartSheet.dart';
 import 'package:wtf_sliding_sheet/wtf_sliding_sheet.dart';
 
 class HomeBottomNavBar extends StatelessWidget {
@@ -11,21 +10,28 @@ class HomeBottomNavBar extends StatelessWidget {
     return Container(
       height: 65,
       padding: EdgeInsets.symmetric(horizontal: 20),
-       decoration: BoxDecoration(
-         color: Color(0xFF475269),
-         borderRadius: BorderRadius.only(
-         topLeft: Radius.circular(25),
-         topRight: Radius.circular(25),
+      decoration: BoxDecoration(
+        color: Color(0xFF475269),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(25),
+          topRight: Radius.circular(25),
         ),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-
-          Icon(
-            Icons.category_outlined,
-            color: Colors.white,
-            size: 32,
+          InkWell(
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AddNewProduct(),
+              ),
+            ),
+            child: Icon(
+              Icons.add,
+              color: Colors.white,
+              size: 32,
+            ),
           ),
           InkWell(
             onTap: () {
@@ -45,31 +51,19 @@ class HomeBottomNavBar extends StatelessWidget {
               size: 32,
             ),
           ),
-         /*  Icon(
-            Icons.favorite_border,
-            color: Colors.white,
-            size: 32,
-          ), */
-
-
-
-   InkWell(
-
-               onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ProfilePage(),
-                    ),
-                  ),
-
-
-            child:  Icon(
-            Icons.person,
-            color: Colors.white,
-            size: 32,
+          InkWell(
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>ProfilePage(),
+              ),
+            ),
+            child: Icon(
+              Icons.person,
+              color: Colors.white,
+              size: 32,
+            ),
           ),
-          ),
-
         ],
       ),
     );

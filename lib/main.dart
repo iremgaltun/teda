@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teda1/pages/AddNewProduct.dart';
 import 'package:teda1/pages/HomePage.dart';
 import 'package:teda1/pages/LoginPage.dart';
 import 'package:teda1/pages/ProfilePage.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget{
           "ItemPage":(context) => ItemPage(),
           "KayitPage":(context) => kayitPage(),
           "profilePage":(context)=> ProfilePage(),
+          "addNewProduct":(context) => AddNewProduct(),
 
         }
     );
