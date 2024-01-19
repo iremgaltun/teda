@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "755878673267",
+    "project_id": "tedarik-firebase",
+    "storage_bucket": "tedarik-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755878673267:android:21c53a6fc5f733ad00a306",
+        "android_client_info": {
+          "package_name": "com.example.teda1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNgRf_Eibus3OYcf5NS9ebjmfnF4sv364"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

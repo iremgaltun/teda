@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teda1/pages/notificationPage.dart';
 import 'package:teda1/widgets/AllItemWidget.dart';
 import 'package:teda1/widgets/HomeBottomNavBar.dart';
 import 'package:teda1/widgets/RowItemWidget.dart';
@@ -19,6 +20,23 @@ class HomePage extends StatelessWidget {
             letterSpacing: 1,
           ),
         ),
+        actions: <Widget>[
+    IconButton(
+
+      icon: Icon(
+        Icons.notifications_none_rounded,
+        color: Colors.white,
+      ),
+      onPressed: () {
+        Navigator.push(
+         context,
+        MaterialPageRoute(
+        builder: (context) => NotificationPage(),
+          ),
+          );
+      },
+    )
+  ],
 
       ),
       backgroundColor: Colors.white,

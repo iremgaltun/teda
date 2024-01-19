@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teda1/pages/AddNewProduct.dart';
+import 'package:teda1/pages/ApplyPage.dart';
 import 'package:teda1/pages/ProfilePage.dart';
-import 'package:teda1/widgets/BottomCartSheet.dart';
 import 'package:wtf_sliding_sheet/wtf_sliding_sheet.dart';
 
 class HomeBottomNavBar extends StatelessWidget {
@@ -34,17 +34,12 @@ class HomeBottomNavBar extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {
-              showSlidingBottomSheet(context, builder: (context) {
-                return SlidingSheetDialog(
-                  elevation: 8,
-                  cornerRadius: 16,
-                  builder: (context, state) {
-                    return BottomCartSheet();
-                  },
-                );
-              });
-            },
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ApplyPage(),
+              ),
+            ),
             child: Icon(
               Icons.bookmark_outlined,
               color: Colors.white,
