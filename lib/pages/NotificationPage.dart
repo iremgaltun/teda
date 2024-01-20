@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:teda1/service/notificaiton_helper.dart';
 
-class NotificationPage extends StatelessWidget {
+class NotificationPage extends StatefulWidget {
+  const NotificationPage({super.key});
+
+  @override
+  State<NotificationPage> createState() => _NotificationPageState();
+}
+
+class _NotificationPageState extends State<NotificationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFF475269),
-        shadowColor: Color(0XFF475269).withOpacity(0.8),
-        title: Text(
+        backgroundColor: const Color(0xFF475269),
+        shadowColor: const Color(0XFF475269).withOpacity(0.8),
+        title: const Text(
           'Bildirim Sayfası',
           style: TextStyle(
             color: Colors.white,
@@ -17,7 +25,7 @@ class NotificationPage extends StatelessWidget {
           ),
         ),
       ),
-      body: SingleChildScrollView(
+      body:  SingleChildScrollView(
         child: Column(
           children: [
             NotificationBar(message: 'Paylaştığınız ürüne başvuru var'),
@@ -25,6 +33,7 @@ class NotificationPage extends StatelessWidget {
             Center(
               child: NotificationContent(),
             ),
+
           ],
         ),
       ),
@@ -35,22 +44,22 @@ class NotificationPage extends StatelessWidget {
 class NotificationBar extends StatelessWidget {
   final String message;
 
-  const NotificationBar({required this.message});
+  const NotificationBar({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 75,
-      margin: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
       alignment: Alignment.center,
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: Color(0xFFF5F9FD),
+        color: const Color(0xFFF5F9FD),
         boxShadow: [
           BoxShadow(
-            color: Color(0xFF475269).withOpacity(0.8),
+            color: const Color(0xFF475269).withOpacity(0.8),
             blurRadius: 5.0,
-            offset: Offset(0, 2),
+            offset: const Offset(0, 2),
           ),
         ],
         borderRadius: BorderRadius.circular(10),
@@ -60,13 +69,13 @@ class NotificationBar extends StatelessWidget {
         children: [
           Icon(
             Icons.notifications,
-            color: Color(0xFF475269).withOpacity(0.8),
+            color: const Color(0xFF475269).withOpacity(0.8),
             size: 30,
           ),
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           Text(
             message,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               color: Colors.black,
             ),
@@ -78,20 +87,22 @@ class NotificationBar extends StatelessWidget {
 }
 
 class NotificationContent extends StatelessWidget {
+  const NotificationContent({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
             Icons.notifications,
             size: 100,
-            color: Color(0XFF475269).withOpacity(0.3),
+            color: const Color(0XFF475269).withOpacity(0.3),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             'Bildirim!',
             style: TextStyle(
               fontSize: 24,
@@ -104,3 +115,4 @@ class NotificationContent extends StatelessWidget {
     );
   }
 }
+

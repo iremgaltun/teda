@@ -3,9 +3,34 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 
+
 class AuthService{
   final firebaseAuth = FirebaseAuth.instance;
   final firebaseFirestore = FirebaseFirestore.instance;
+
+    Future signInAnonymous() async {
+    try {
+      final result = await firebaseAuth.signInAnonymously();
+      print(result.user!.uid);
+      return result.user;
+    } catch (e) {
+      print("Anon error $e");
+      return null;
+    }
+  }
+
+  Future<String?> forgotPassword(String email) async {
+    String? res;
+    try {
+      final result = await firebaseAuth.sendPasswordResetEmail(email: email);
+      print("Mail kutunuzu kontrol ediniz");
+    } on FirebaseAuthException catch (e) {
+      if (e.code == "email-already-in-use") {
+        res = "Mail Zaten Kayitli.";
+      }
+    }
+  }
+
 
   
   Future<String?> singIn(String email, String password)async{

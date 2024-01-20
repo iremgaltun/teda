@@ -4,17 +4,18 @@ import 'package:teda1/widgets/AllItemWidget.dart';
 import 'package:teda1/widgets/HomeBottomNavBar.dart';
 import 'package:teda1/widgets/RowItemWidget.dart';
 
-import 'NotificationPage.dart';
 
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF475269),
-        shadowColor: Color(0xFF475269).withOpacity(0.8),
-        title: Text(
+        backgroundColor: const Color(0xFF475269),
+        shadowColor: const Color(0xFF475269).withOpacity(0.8),
+        title: const Text(
           "Ana Sayfa",
           style: TextStyle(
             color: Colors.white,
@@ -25,7 +26,7 @@ class HomePage extends StatelessWidget {
         actions: <Widget>[
     IconButton(
 
-      icon: Icon(
+      icon: const Icon(
         Icons.notifications_none_rounded,
         color: Colors.white,
       ),
@@ -33,7 +34,7 @@ class HomePage extends StatelessWidget {
         Navigator.push(
          context,
         MaterialPageRoute(
-        builder: (context) => NotificationPage(),
+        builder: (context) => const NotificationPage(),
           ),
           );
       },
@@ -47,23 +48,23 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 ),
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 15),
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                margin: const EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 height: 55,
                 decoration: BoxDecoration(
-                  color: Color(0xFFF5F9FD),
+                  color: const Color(0xFFF5F9FD),
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xFF475269).withOpacity(0.3),
+                      color: const Color(0xFF475269).withOpacity(0.3),
                       blurRadius: 5,
                       spreadRadius: 1,
                     ),
@@ -71,17 +72,17 @@ class HomePage extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       width: 300,
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: "search",
                         ),
                       ),
                     ),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.search,
                       size: 27,
                       color: Color(0xFF475629),
@@ -89,14 +90,14 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 30),
-              RowItemWidget(),
-              AllItemWidget(),
+              const SizedBox(height: 30),
+               RowItemWidget(),
+              const AllItemWidget(),
             ],
           ),
         ),
       ),
-      bottomNavigationBar: HomeBottomNavBar(),
+      bottomNavigationBar:  HomeBottomNavBar(),
     );
   }
 }

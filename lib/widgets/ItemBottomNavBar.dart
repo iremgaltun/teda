@@ -23,7 +23,7 @@ class ItemBottomNavBar extends StatelessWidget {
               ],
             ),
             child: Icon(
-              Icons.shopping_bag,
+              Icons.bookmark_outline_rounded,
               color: Colors.white,
               size: 45,
             ),

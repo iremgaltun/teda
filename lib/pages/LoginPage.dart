@@ -153,7 +153,7 @@ class _LoginPageState extends State<LoginPage> {
                      Navigator.push(
                        context,
                       MaterialPageRoute(
-                        builder: (context) =>  HomePage(),
+                        builder: (context) =>  const HomePage(),
                       ),
                     );
                       
@@ -203,7 +203,7 @@ class _LoginPageState extends State<LoginPage> {
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ForgetPassword(),
+                    builder: (context) =>  ForgetPassword(),
                   ),
                 ),
                 child: Row(
@@ -212,7 +212,7 @@ class _LoginPageState extends State<LoginPage> {
                     Text(
                       "Şifrenizi mi unuttunuz?",
                       style: TextStyle(
-                        color: Color(0xFF475269).withOpacity(0.8),
+                        color: const Color(0xFF475269).withOpacity(0.8),
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
                       ),
