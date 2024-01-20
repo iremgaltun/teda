@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teda1/pages/AddNewProduct.dart';
 import 'package:teda1/pages/ApplyPage.dart';
+import 'package:teda1/pages/ProductPage.dart';
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -81,7 +82,7 @@ class ProfilePage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ApplyPage(),
+                              builder: (context) => ProductPage(),
                             ),
                           );
                         },
@@ -89,7 +90,7 @@ class ProfilePage extends StatelessWidget {
                           margin: const EdgeInsets.only(
                               left: 35, right: 35, bottom: 10),
                           color: Color(0xFF475269),
-                          shadowColor: Color(0xFF475629).withOpacity(0.8),
+                          shadowColor: Color(0xFF475269).withOpacity(0.8),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30)),
                           child: ListTile(

@@ -84,7 +84,7 @@ class RowItemWidget extends StatelessWidget{
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Icon(
-                        Icons.bookmark_add_rounded,
+                        Icons.bookmark_outline_rounded,
                         color: Colors.white,
                         size:20,
 

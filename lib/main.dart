@@ -3,9 +3,10 @@ import 'package:teda1/pages/AddNewProduct.dart';
 import 'package:teda1/pages/ApplyPage.dart';
 import 'package:teda1/pages/HomePage.dart';
 import 'package:teda1/pages/LoginPage.dart';
+import 'package:teda1/pages/ProductPage.dart';
 import 'package:teda1/pages/ProfilePage.dart';
 import 'package:teda1/pages/ForgetPassword.dart';
-import 'package:teda1/pages/itemPage.dart';
+import 'package:teda1/pages/ItemPage.dart';
 import 'package:teda1/pages/kayitPage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:teda1/pages/notificationPage.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget{
           "notificationPage":(context)=> NotificationPage(),
           "applyPage":(context) => ApplyPage(),
           "forgetpasword":(context) => ForgetPassword(),
+          "productPage":(context) => ProductPage(),
         }
     );
   }

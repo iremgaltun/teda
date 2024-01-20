@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teda1/pages/ProductPage.dart';
 
 class AddNewProduct extends StatelessWidget {
   @override
@@ -65,10 +66,13 @@ class AddNewProduct extends StatelessWidget {
               ),
               SizedBox(height: 32.0),
               ElevatedButton(
-                onPressed: () {
-                  // Bu butona tıklanınca yapılacak işlemler
-                },
                 child: Text('Ekle'),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context)=>ProductPage()),
+                  );
+                }
+               ,
               ),
             ],
           ),
