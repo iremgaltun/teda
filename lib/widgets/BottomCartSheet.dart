@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
 
 class BottomCartSheet extends StatelessWidget{
+  const BottomCartSheet({super.key});
+
   @override
   Widget build(BuildContext context){
     return Material(
       child:Container(
       height: 600,
-      padding: EdgeInsets.only(top:20),
-      color: Color(0xFFCEDDEE),
+      padding: const EdgeInsets.only(top:20),
+      color: const Color(0xFFCEDDEE),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
+          SizedBox(
             height: 500,
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 10,horizontal: 15),
-                    padding: EdgeInsets.symmetric(horizontal:10 ),
+                    margin: const EdgeInsets.symmetric(vertical: 10,horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal:10 ),
                     height: 140,
                     decoration: BoxDecoration(
-                      color: Color(0xFFF5F9FD),
+                      color: const Color(0xFFF5F9FD),
                       borderRadius: BorderRadius.circular(10),
-                      boxShadow:[
+                      boxShadow:const [
                       BoxShadow(
                       color:Color (0xFF475269),
                       blurRadius: 5,
@@ -40,11 +42,11 @@ class BottomCartSheet extends StatelessWidget{
                             alignment: Alignment.center,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 10,right:60),
+                                margin: const EdgeInsets.only(top: 10,right:60),
                                 height: 90,
                                 width: 100,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFF475269),
+                                  color: const Color(0xFF475269),
                                   borderRadius: BorderRadius.circular(10),
 
                                 ),
@@ -57,12 +59,12 @@ class BottomCartSheet extends StatelessWidget{
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(vertical: 30),
+                          padding: const EdgeInsets.symmetric(vertical: 30),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("tedo",
+                              const Text("tedo",
                               style: TextStyle(
                                 color: Color(0xFF475269),
                                 fontSize: 23,
@@ -72,44 +74,44 @@ class BottomCartSheet extends StatelessWidget{
                               Row(
                                 children: [
                                   Container(
-                                    padding: EdgeInsets.all(5),
+                                    padding: const EdgeInsets.all(5),
                                     decoration: BoxDecoration(
-                                      color: Color(0xFFF5F9FD),
+                                      color: const Color(0xFFF5F9FD),
                                       borderRadius: BorderRadius.circular(10),
                                       boxShadow: [
                                         BoxShadow(
-                                          color: Color(0xFF475269).withOpacity(0.3),
+                                          color: const Color(0xFF475269).withOpacity(0.3),
                                           blurRadius: 5,
                                           spreadRadius: 1,
                                         ),
                                       ],
 
                                       ),
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.heart_broken_rounded,
                                         size: 18,
                                         ),
                                     ),
                                     Container(
-                                      margin: EdgeInsets.symmetric(horizontal: 10),
+                                      margin: const EdgeInsets.symmetric(horizontal: 10),
 
                                     ),
 
                                   Container(
-                                    padding: EdgeInsets.all(5),
+                                    padding: const EdgeInsets.all(5),
                                     decoration: BoxDecoration(
-                                      color: Color(0xFFF5F9FD),
+                                      color: const Color(0xFFF5F9FD),
                                       borderRadius: BorderRadius.circular(10),
                                       boxShadow: [
                                         BoxShadow(
-                                          color: Color(0xFF475269).withOpacity(0.3),
+                                          color: const Color(0xFF475269).withOpacity(0.3),
                                           blurRadius: 5,
                                           spreadRadius: 1,
                                         ),
                                       ],
 
                                       ),
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.add,
                                         size: 18,
                                         ),
@@ -119,16 +121,16 @@ class BottomCartSheet extends StatelessWidget{
                             ],
                           ),
                         ),
-                        Spacer(),
-                        Padding(padding: EdgeInsets.symmetric(vertical: 25),
+                        const Spacer(),
+                        Padding(padding: const EdgeInsets.symmetric(vertical: 25),
                         child: Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.all(8),
+                              padding: const EdgeInsets.all(8),
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
-                                boxShadow:[ BoxShadow(
+                                boxShadow:const [ BoxShadow(
                                   color: Color(0xFF475269),
                                   blurRadius: 5,
                                   spreadRadius: 1,
@@ -136,7 +138,7 @@ class BottomCartSheet extends StatelessWidget{
                                 ],
 
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.delete,
                                 color: Color(0xFF475269),
                                 size:20,
