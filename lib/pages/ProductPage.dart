@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teda1/pages/itemPage.dart';
+import 'package:teda1/pages/ItemPage.dart';
 
 class ProductPage extends StatelessWidget {
   final List<String> products = ['ürün1', 'ürün 2', 'ürün 3', 'ürün 4', 'ürün 5'];
@@ -34,7 +34,7 @@ class ProductPage extends StatelessWidget {
                   ),
                 );
               },
-              child: buildProductContainer(products[index]),
+              child: buildProductContainer(products[index], index),
             );
           },
         ),
@@ -42,7 +42,7 @@ class ProductPage extends StatelessWidget {
     );
   }
 
-  Widget buildProductContainer(String text) {
+  Widget buildProductContainer(String text, int index) {
     return Container(
       width: double.infinity,
       height: 150,
@@ -75,14 +75,7 @@ class ProductPage extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 8.0),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Image.asset(
-                  "assets/images/7.png",
-                  width: 80.0,
-                  height: 50.0,
-                ),
-              ),
+              ProductImage(i: index + 1),
             ],
           ),
           Padding(
@@ -99,4 +92,20 @@ class ProductPage extends StatelessWidget {
   }
 }
 
+class ProductImage extends StatelessWidget {
+  final int i;
 
+  ProductImage({required this.i});
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Image.asset(
+        "assets/images/$i.png",
+        width: 80.0,
+        height: 50.0,
+      ),
+    );
+  }
+}

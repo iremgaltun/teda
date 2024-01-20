@@ -34,15 +34,14 @@ class ApplyPage extends StatelessWidget {
                   ),
                 );
               },
-              child: buildProductContainer(products[index]),
+              child: buildProductContainer(products[index],index),
             );
           },
         ),
       ),
     );
   }
-
-  Widget buildProductContainer(String text) {
+Widget buildProductContainer(String text, int index) {
     return Container(
       width: double.infinity,
       height: 150,
@@ -75,25 +74,36 @@ class ApplyPage extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 8.0),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Image.asset(
-                  "assets/images/7.png",
-                  width: 80.0,
-                  height: 50.0,
-                ),
-              ),
+              ProductImage(i: index + 1),
             ],
           ),
           Padding(
             padding: EdgeInsets.only(top: 40),
             child: Icon(
-              Icons.bookmark_remove_rounded,
+              Icons.delete,
               color: Color(0xFF475269).withOpacity(0.8),
               size: 40.0,
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class ProductImage extends StatelessWidget {
+  final int i;
+
+  ProductImage({required this.i});
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Image.asset(
+        "assets/images/$i.png",
+        width: 80.0,
+        height: 50.0,
       ),
     );
   }
